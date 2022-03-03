@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>子域名信息收集 | 网络安全学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="来这里学习最全面的网络安全知识">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.d7afd2c6.js" as="script"><link rel="preload" href="/assets/js/2.72359d9b.js" as="script"><link rel="preload" href="/assets/js/9.65c6eb51.js" as="script"><link rel="prefetch" href="/assets/js/10.c65506a8.js"><link rel="prefetch" href="/assets/js/11.e383c92a.js"><link rel="prefetch" href="/assets/js/12.74142bcc.js"><link rel="prefetch" href="/assets/js/13.d12a1b6f.js"><link rel="prefetch" href="/assets/js/14.828d2649.js"><link rel="prefetch" href="/assets/js/3.b05f07ce.js"><link rel="prefetch" href="/assets/js/4.0a2f3beb.js"><link rel="prefetch" href="/assets/js/5.a33a2f42.js"><link rel="prefetch" href="/assets/js/6.f0091315.js"><link rel="prefetch" href="/assets/js/7.542afb00.js"><link rel="prefetch" href="/assets/js/8.639d1b64.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="网络安全学习笔记" class="logo"> <span class="site-name can-hide">网络安全学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="渗透测试" class="dropdown-title"><span class="title">渗透测试</span> <span class="arrow down"></span></button> <button type="button" aria-label="渗透测试" class="mobile-dropdown-title"><span class="title">渗透测试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Penetration/information/" class="nav-link router-link-active">
+  信息收集
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="渗透测试" class="dropdown-title"><span class="title">渗透测试</span> <span class="arrow down"></span></button> <button type="button" aria-label="渗透测试" class="mobile-dropdown-title"><span class="title">渗透测试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Penetration/information/" class="nav-link router-link-active">
+  信息收集
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>IP信息收集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>域名信息收集</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Penetration/information/four.html" aria-current="page" class="active sidebar-link">子域名信息收集</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#枚举收集子域名" class="sidebar-link">枚举收集子域名</a></li><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#搜索引擎收集子域名" class="sidebar-link">搜索引擎收集子域名</a></li><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#爬虫收集子域名" class="sidebar-link">爬虫收集子域名</a></li><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#备案查询子域名" class="sidebar-link">备案查询子域名</a></li><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#dns公开记录查询子域名" class="sidebar-link">DNS公开记录查询子域名</a></li><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#使用第三方聚合服务收集子域名" class="sidebar-link">使用第三方聚合服务收集子域名</a></li><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#证书透明性信息收集子域名" class="sidebar-link">证书透明性信息收集子域名</a></li><li class="sidebar-sub-header"><a href="/Penetration/information/four.html#dns域传送漏洞收集子域名" class="sidebar-link">DNS域传送漏洞收集子域名</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>服务器信息收集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网站信息收集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>人力资源信息收集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>社会工程学信息收集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Goole语法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>信息收集工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>信息收集工具编写</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="子域名信息收集"><a href="#子域名信息收集" class="header-anchor">#</a> 子域名信息收集</h1> <p>子域名是父域名的下一级，像www.xxx.com这样的域名为企业的主站域名,企业对于主站域名的应用的防护措施比较健全,不管是应用本身的漏洞发现、漏洞修复,还是安全设备相关的防护都做得更加及时和到位,而企业可能有多个、几个甚至更多的子域名应用,因为子域名数量多，企业子域名的防护可能没有主站的防护做的到位，攻击不到主站的时候，尝试攻击子域名，进行子域名的信息收集。</p> <p>以下是几种子域名的收集方式:</p> <h2 id="枚举收集子域名"><a href="#枚举收集子域名" class="header-anchor">#</a> 枚举收集子域名</h2> <p>枚举的方式就是进行暴力的破解，首先需要一个好的字典，这样会增加成功率。</p> <h3 id="_1、使用layer子域名挖掘机"><a href="#_1、使用layer子域名挖掘机" class="header-anchor">#</a> 1、使用Layer子域名挖掘机</h3> <p>使用Layer子域名挖掘机进行收集，内置了常见的子域名字典，支持多线程</p> <p><img src="/images/Penetration/information/14.png" alt="14"></p> <h3 id="_2、使用subdomainsbrute"><a href="#_2、使用subdomainsbrute" class="header-anchor">#</a> 2、使用subDomainsBrute</h3> <p>subDomainsBrute工具用于域名收集，并发DNS暴力枚举，发现其他工具无法检测的域名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>工具GIthub地址：https://github.com/lijiejie/subDomainsBrute
+下载：git clone https://github.com/lijiejie/subDomainsBrute
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="/images/Penetration/information/15.png" alt="15"></p> <h3 id="_3、在线子域名爆破"><a href="#_3、在线子域名爆破" class="header-anchor">#</a> 3、在线子域名爆破</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>http://z.zcjun.com/
+https://phpinfo.me/domain/
+http://tools.bugscaner.com/subdomain/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="搜索引擎收集子域名"><a href="#搜索引擎收集子域名" class="header-anchor">#</a> 搜索引擎收集子域名</h2> <h3 id="_1、使用google语法进行子域名的收集"><a href="#_1、使用google语法进行子域名的收集" class="header-anchor">#</a> 1、使用google语法进行子域名的收集</h3> <p>使用Google语法搜索</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>site:xxx.com 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="/images/Penetration/information/16.png" alt="16"></p> <h3 id="_2、使用空间探测引擎子域名收集"><a href="#_2、使用空间探测引擎子域名收集" class="header-anchor">#</a> 2、使用空间探测引擎子域名收集</h3> <p>使用空间探测引擎进行子域名搜索</p> <p><img src="/images/Penetration/information/17.png" alt="17"></p> <h2 id="爬虫收集子域名"><a href="#爬虫收集子域名" class="header-anchor">#</a> 爬虫收集子域名</h2> <h2 id="备案查询子域名"><a href="#备案查询子域名" class="header-anchor">#</a> 备案查询子域名</h2> <p>服务器如果在国内，那么域名就要进行备案</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://icp.chinaz.com/
+https://www.beianx.cn/
+http://www.beian.gov.cn
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="dns公开记录查询子域名"><a href="#dns公开记录查询子域名" class="header-anchor">#</a> DNS公开记录查询子域名</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>ip138：https://site.ip138.com/
+百度云观测：http://ce.baidu.com/index/getRelatedSites?site_address=baidu.com
+circl：https://www.circl.lu/services/passive-dns/#passive-dns
+hackertarget：https://hackertarget.com/find-dns-host-records/
+riddler：https://riddler.io/search?q=pld:baidu.com
+bufferover：https://dns.bufferover.run/dns?q=.baidu.com
+dnsdb：https://dnsdb.io/zh-cn/search?q=baidu.com
+ipv4info：http://ipv4info.com/
+robtex：https://www.robtex.com/dns-lookup/
+chinaz：https://alexa.chinaz.com/
+netcraft：https://searchdns.netcraft.com/
+securitytrails：https://docs.securitytrails.com/v1.0/reference#get-domain-
+sitedossier：http://www.sitedossier.com/
+threatcrowd：https://www.threatcrowd.org/
+siterankdata：https://siterankdata.com/
+findsubdomains：https://findsubdomains.com/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="使用第三方聚合服务收集子域名"><a href="#使用第三方聚合服务收集子域名" class="header-anchor">#</a> 使用第三方聚合服务收集子域名</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>dnsscan：https://www.dnsscan.cn
+微步：https://x.threatbook.cn/
+alienvault：https://otx.alienvault.com/
+riskiq：https://www.riskiq.com/
+threatminer：https://www.threatminer.org/
+virustotal：https://www.virustotal.com/gui/home/search
+dnsdumpster：https://dnsdumpster.com/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_1、sublist3r"><a href="#_1、sublist3r" class="header-anchor">#</a> 1、sublist3r</h3> <p>Sublist3r是一个用Python编写的子域发现工具，旨在使用来自公共资源和暴力技术的数据枚举网站的子域。公共资源包括广泛的流行搜索引擎，如谷歌，雅虎，必应，百度，Ask以及Netcraft，Virustotal，ThreatCrowd，DNSdumpster和ReverseDNS，以发现子域名。或者，您也可以对给定域名强制执行子域，然后由名为Subbrute的集成工具处理</p> <p>安装：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git clone https://github.com/aboul3la/Sublist3r.git
+cd Sublist3r
+pip install -r requirements.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>参数介绍：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-d -domain要枚举子域的域名
+-b -bruteforce启用subbrute bruteforce模块
+-p -ports根据特定的tcp端口扫描找到的子域
+-v --verbose启用详细模式并实时显示结果
+-t -threads用于subbrute bruteforce的线程数
+-e - 引擎指定逗号分隔的搜索引擎列表
+-o -output将结果保存到文本文件
+-h -help显示帮助信息并退出
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>使用方式：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>查询：python sublist3r.py -d  xxx.com
+爆破：python sublist3r.py -b -t 10 -d xxx.com 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="/images/Penetration/information/20.png" alt="20"></p> <h3 id="_2、oneforall"><a href="#_2、oneforall" class="header-anchor">#</a> 2、OneForAll</h3> <p>OneForAll是一款功能强大的子域收集工具 <em>OneForAll</em>基于Python 3.8.0开发和测试</p> <p>安装</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>下载：
+git clone https://gitee.com/shmilylty/OneForAll.git
+git clone https://github.com/shmilylty/OneForAll.git 
+安装：
+cd OneForAll/ 
+python -m pip install --user  -U pip setuptools wheel -i https://mirrors.aliyun.com/pypi/simple/   
+pip3 install --user -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>使用方式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>python3 oneforall.py --target baidu.com run /*收集*/
+python3 aiobrute.py --target baidu.com run  /*爆破*/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="/images/Penetration/information/21.png" alt="21"></p> <h2 id="证书透明性信息收集子域名"><a href="#证书透明性信息收集子域名" class="header-anchor">#</a> 证书透明性信息收集子域名</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>crtsh：https://crt.sh/
+censys：https://censys.io/certificates
+spyse：https://spyse.com/search/certificate
+certspotter：https://sslmate.com/certspotter/api/
+entrust：https://www.entrust.com/ct-search/
+facebook：https://developers.facebook.com/tools/ct
+google：https://developers.facebook.com/tools/ct
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_1、crt-sh对域名搜索"><a href="#_1、crt-sh对域名搜索" class="header-anchor">#</a> 1、crt.sh对域名搜索</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://crt.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="/images/Penetration/information/18.png" alt="18"></p> <h3 id="_2、使用google对域名搜索"><a href="#_2、使用google对域名搜索" class="header-anchor">#</a> 2、使用google对域名搜索</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://transparencyreport.google.com/https/certificates
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="/images/Penetration/information/19.png" alt="19"></p> <h2 id="dns域传送漏洞收集子域名"><a href="#dns域传送漏洞收集子域名" class="header-anchor">#</a> DNS域传送漏洞收集子域名</h2> <p>DNS协议支持使用axfr类型的记录进行区域传送，用来解决主从同步的问题。如果管理员在配置DNS服务器的时候没有限制允许获取记录的来源，将会导致DNS域传送漏洞。</p> <p>漏洞复现地址如下</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://vulhub.org/#/environments/dns/dns-zone-transfer/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>具体复现请阅读【<a href="">DNS域传送漏洞</a>】</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Penetration/information/three.html" class="prev">
+        C段主机信息收集
+      </a></span> <span class="next"><a href="/Penetration/information/" class="router-link-active">
+        /Penetration/information/
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d7afd2c6.js" defer></script><script src="/assets/js/2.72359d9b.js" defer></script><script src="/assets/js/9.65c6eb51.js" defer></script>
+  </body>
+</html>
